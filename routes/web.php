@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    $links = config('db_links');
+    $link_footer = config('footer_db');
+    $link_fot_mid = config('footer_list_db');
+    return view('home',compact('links','link_footer','link_fot_mid'));
+})->name('home');
+
+Route::resource('comics', ComicController::class);
