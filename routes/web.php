@@ -16,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $links = config('db_links');
-    $link_footer = config('footer_db');
-    $link_fot_mid = config('footer_list_db');
-    return view('home',compact('links','link_footer','link_fot_mid'));
+   
+    return view('home',);
 })->name('home');
 
 Route::resource('comics', ComicController::class);
