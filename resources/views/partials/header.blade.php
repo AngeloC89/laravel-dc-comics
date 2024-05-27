@@ -1,6 +1,12 @@
+@php
+
+$links = config('db_links');
+
+@endphp
+
 <header>
 
-    <nav class="navbar navbar-light bg-light justify-content-around">
+    <nav class="container navbar navbar-light bg-light justify-content-around">
         <!-- Logo -->
         <div id="logo" class="text-center">
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo">
