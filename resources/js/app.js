@@ -11,5 +11,10 @@ del.addEventListener("click", (e) => {
     const modale = document.getElementById("exampleModal");
     const myModal = new bootstrap.Modal(modale);
     myModal.show();
-    const btnSave = modale.querySelector(" .btn.btn-danger");
+    const btnSave = modale.querySelector(".btn.btn-danger");
+    // console.log(btnSave);
+    // console.log(del);
+    btnSave.addEventListener("click", () => {
+        del.parentElement.submit();
+    });
 });
