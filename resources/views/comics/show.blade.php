@@ -5,23 +5,25 @@
 @section('content')
 <div id="show_single" class="container">
 
-<h1 class="text-truncate text-uppercase text-white text-center p-3 ">{{ $comic->title }}</h1>
-<div class="w-100 d-flex justify-content-center">
-<img src="{{ $comic->thumb }}" class=" w-50 m-auto" alt="{{ $comic->title }}">
-</div>
+  <h1 class="text-truncate text-uppercase text-white text-center p-3 ">{{ $comic->title }}</h1>
+  <div class="w-100 d-flex justify-content-center">
+    <img src="{{ $comic->thumb }}" class=" w-50 m-auto" alt="{{ $comic->title }}">
+  </div>
 
-<div class="text-white fs-3 py-4">{{ $comic->description }}</div>
+  <div class="text-white fs-3 py-4">{{ $comic->description }}</div>
 
-<div class="text-white fs-3 py-4">Price: {{ $comic->price }}</div>
+  <div class="text-white fs-3 py-4">Price: {{ $comic->price }}</div>
 
-<div class="d-flex justify-content-start py-2">
-<button href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">Modifica</button>
+  <div class="d-flex justify-content-start py-2">
+    <button class="btn btn-primary h-25"><a class="text-decoration-none text-white" href="{{route('comics.edit', $comic->id)}}">Modifica</a></button>
 
-<form action="{{ route('comics.destroy', $comic->id) }}" action="POST">
-@csrf
-@method('DELETE')
-<button id="deleteComic" data-toggle="modal" type="submit" href="" class="btn btn-danger ms-3">Elimina</button>
-</form>
+    <form action="{{ route('comics.destroy', $comic->id) }}" action="POST">
+      @csrf
+      @method('DELETE')
+      <button id="deleteComic" type="submit" href="" class="btn btn-danger ms-3">Elimina</button>
+    </form>
+
+  </div>
 
 </div>
 
@@ -30,7 +32,8 @@
 @endSection
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

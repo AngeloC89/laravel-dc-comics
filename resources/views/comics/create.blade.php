@@ -38,14 +38,9 @@
                 <option value="graphic book">Graphic book</option>
                 <option value="grafic novel">Graphic novel</option>
             </select>
-        </div>
-       
+        </div>   
         <button class="btn btn-primary" type="submit">Crea</button>
-
-
     </form>
-
-
 </section>
 
 @endsection
