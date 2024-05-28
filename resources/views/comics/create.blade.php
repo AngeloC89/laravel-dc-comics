@@ -9,33 +9,40 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label"></label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Titolo">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Titolo" required>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label"></label>
-            <input type="text" class="form-control" id="description" name="description" placeholder="Descrizone">
+            <input type="text" class="form-control" id="description" name="description" placeholder="Descrizone" required>
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label"></label>
-            <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Immagine">
+            <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Immagine" required>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label"></label>
-            <input type="text" class="form-control" id="price" name="price" placeholder="Prezzo">
+            <input type="text" class="form-control" id="price" name="price" placeholder="Prezzo" required>
         </div>
         <div class="mb-3">
             <label for="series" class="form-label"></label>
-            <input type="text" class="form-control" id="series" name="series" placeholder="Serie">
+            <input type="text" class="form-control" id="series" name="series" placeholder="Serie" required>
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label"></label>
-            <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="Data di vendita">
+            <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="Data di vendita" required>
         </div>
         <div class="mb-3">
             <label for="type" class="form-label"></label>
-            <input type="text" class="form-control" id="type" name="type" placeholder="Tipo"></input>
+            <select type="text" name="type" id="type" class="form-control">
+                <option value="comic book">Comic book</option>
+                <option value="graphic book">Graphic book</option>
+                <option value="grafic novel">Graphic novel</option>
+            </select>
         </div>
+       
         <button class="btn btn-primary" type="submit">Crea</button>
+
+
     </form>
 
 
