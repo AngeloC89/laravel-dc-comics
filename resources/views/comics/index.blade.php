@@ -14,6 +14,7 @@
                                 <h5 class="card-title text-truncate text-uppercase text-left "><a class="text-decoration-none text-white" href="{{route('comics.show', $comic['id'])}}">{{ $comic->title }}</a></h5>
                               
                             </div>
+                            <button class="btn btn-primary"><a class="text-decoration-none text-white" href="{{route('comics.show', $comic['id'])}}">Dettagli</a></button>
                         </div>
                     </div>
                 @endforeach

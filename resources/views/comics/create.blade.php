@@ -16,8 +16,8 @@
             <input type="text" class="form-control" id="description" name="description" placeholder="Descrizone">
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label"></label>
-            <input type="text" class="form-control" id="image" name="image" placeholder="Immagine">
+            <label for="thumb" class="form-label"></label>
+            <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Immagine">
         </div>
         <div class="mb-3">
             <label for="price" class="form-label"></label>
