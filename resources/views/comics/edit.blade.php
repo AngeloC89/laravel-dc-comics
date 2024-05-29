@@ -57,9 +57,9 @@
         <div class="mb-3">
             <label for="type" class="form-label"></label>
             <select type="text" name="type" id="type" value="{{ $comic->type }}" class="form-control @error('type') is-invalid @enderror">
-                <option value="comic book" {{ $comic->type === 'graphic book' ? 'selected' : ''}} >Comic book</option>
+                <option value="comic book" {{ $comic->type === 'comic book' ? 'selected' : ''}} >Comic book</option>
                 <option value="graphic book" {{ $comic->type === 'graphic book' ? 'selected' : ''}} >Graphic book</option>
-                <option value="grafic novel"{{ $comic->type === 'graphic book' ? 'selected' : ''}} >Graphic novel</option>
+                <option value="grafic novel"{{ $comic->type === 'graphic novel' ? 'selected' : ''}} >Graphic novel</option>
             </select>
         
             @error('type')
