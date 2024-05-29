@@ -44,6 +44,20 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required|max:100|min:3',
+            'description' => 'nullable',
+            'thumb' => 'required|',
+            'price' => 'required',
+            'series' => 'required',
+            'sale_date' => 'required|min:5',
+            'type' => 'required',
+        ]);
+
+
+
+
         $form_data = $request->all();
         // $new_comic = new Comic();
         // $new_comic->fill($form_data);
@@ -113,6 +127,6 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route("comics.index");
+        return redirect()->route("comics.index")->with('message', "La card $comic->title è stata eliminata");
     }
 }

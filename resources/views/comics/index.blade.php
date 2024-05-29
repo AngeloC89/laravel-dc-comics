@@ -5,6 +5,11 @@
 @section('content')
 
 <div class="container">
+    @if(session()->has('message'))
+    <div class="alert alert-danger">
+        {{ session()->get('message') }}
+    </div>
+    @endif
     <div class="w-25 py-4">
         <form class="d-flex" action="{{route('comics.index')}}" method="GET">
             <select name="search" id="search" class="form-control">
