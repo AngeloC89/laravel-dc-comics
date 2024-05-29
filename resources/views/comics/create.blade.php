@@ -10,56 +10,56 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label text-white " >Titolo</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"> {{old('title')}}
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{old('title')}}" > 
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="description" class="form-label text-white">Descrizione</label>
-            <textarea type="text" class="form-control @error('title') is-invalid @enderror" id="description" name="description" rows="3"></textarea>
-            {{old('description')}}
+            <textarea type="text" class="form-control @error('title') is-invalid @enderror" id="description" name="description" rows="3" >{{old('description')}}</textarea>
+            
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label text-white">Immagine</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="thumb" name="thumb">
-            {{old('thumb')}}
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="thumb" name="thumb"  value="   {{old('thumb')}}">
+         
             @error('thumb')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="price" class="form-label text-white">Prezzo</label>
-            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price">
-            {{old('price')}}
+            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price"  value="{{old('price')}}">
+           
             @error('price')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="series" class="form-label text-white ">Serie</label>
-            <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series">
-            {{old('series')}}
+            <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{old('series')}}">
+       
             @error('series')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label text-white">Data di vendita</label>
-            <input type="text" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date">
-            {{old('sale_date')}}
+            <input type="text" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date" value=" {{old('sale_date')}}">
+           
             @error('sale_date')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="type" class="form-label text-white">Tipo</label>
-            <select type="text" name="type" id="type" class="form-control @error('title') is-invalid @enderror">
+            <select type="text" name="type" id="type" class="form-control @error('title') is-invalid @enderror" value="     {{old('type')}}">
                 <option value="comic book">Comic book</option>
                 <option value="graphic book">Graphic book</option>
                 <option value="grafic novel">Graphic novel</option>
             </select>
-            {{old('type')}}
+       
             @error('type')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror

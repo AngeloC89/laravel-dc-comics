@@ -72,7 +72,7 @@ class ComicController extends Controller
 
         // $new_comic->save();
         $new_comic = Comic::create($form_data);
-        return redirect()->route("comics.index");
+        return redirect()->route("comics.index")->with('message', "La card $new_comic->title è stata creata");
     }
 
     /**
