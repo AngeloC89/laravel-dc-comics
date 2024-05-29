@@ -50,8 +50,8 @@ class ComicController extends Controller
             'description' => 'nullable',
             'thumb' => 'required|',
             'price' => 'required',
-            'series' => 'required',
-            'sale_date' => 'required|min:5',
+            'series' => 'required|min:5',
+            'sale_date' => 'required',
             'type' => 'required',
         ]);
 
@@ -107,6 +107,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+
+        $request->validate([
+            'title' => 'required|max:100|min:3',
+            'description' => 'nullable',
+            'thumb' => 'required|',
+            'price' => 'required',
+            'series' => 'required|min:5',
+            'sale_date' => 'required',
+            'type' => 'required',
+        ]);
+
+
+
         $form_data = $request->all();
         $comic->title = $form_data["title"];
         $comic->description = $form_data["description"];
